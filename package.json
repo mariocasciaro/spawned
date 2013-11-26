@@ -1,0 +1,33 @@
+{
+  "name": "spawned",
+  "description": "Smart wrapper around child_process.spawn using promises",
+  "version": "0.1.0",
+  "author": {
+    "name": "Mario Casciaro"
+  },
+  "homepage": "https://github.com/mariocasciaro/spawned",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mariocasciaro/spawned.git"
+  },
+  "dependencies": {
+    "when": "~2.6.0",
+    "buffers": "~0.1.1",
+    "through2": "~0.2.3"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "chai": "~1.8.0",
+    "mocha-lcov-reporter": "~0.0.1",
+    "coveralls": "~2.3.0",
+    "istanbul": "~0.1.44"
+  },
+  "scripts": {
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha test.js --report html -- -R spec"
+  },
+  "keywords": [
+    "spawn",
+    "child_process"
+  ],
+  "license": "MIT"
+}
