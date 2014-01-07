@@ -11,9 +11,9 @@
     "url": "git://github.com/mariocasciaro/spawned.git"
   },
   "dependencies": {
-    "when": "~2.6.0",
+    "when": "~2.7.1",
     "buffers": "~0.1.1",
-    "through2": "~0.2.3"
+    "through2": "~0.3.0"
   },
   "devDependencies": {
     "mocha": "~1.13.0",
