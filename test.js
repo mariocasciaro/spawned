@@ -10,7 +10,7 @@ describe('spawned', function() {
       expect(res.err, "err").to.be.empty;
       expect(res.combined, "combined").to.match(new RegExp(process.pid));
       done();
-    }).otherwise(done);
+    }).catch(done);
   });
 
 
@@ -25,7 +25,7 @@ describe('spawned', function() {
         expect(outBuff.toString('utf-8'), "out").to.match(new RegExp(process.pid));
         done();
       })
-    }).otherwise(done);
+    }).catch(done);
   });
 
   it('should reject promise in case of error', function(done) {
@@ -33,10 +33,10 @@ describe('spawned', function() {
     spawned('grep', ['nosuchpattern', 'nosuchfile'])
       .then(function(res) {
         done(new Error("Should fail..."));
-      }).otherwise(function(err) {
+      }).catch(function(err) {
         expect(err.code).equal(2);
         expect(err.err).to.match(/No such file/)
         done();
-      }).otherwise(done);
+      }).catch(done);
   });
 });
