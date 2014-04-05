@@ -1,11 +1,10 @@
-# Synopsis
-
-Smart wrapper around `child_process.spawn` using promises.
-
-[![NPM](https://nodei.co/npm/spawned.png?downloads=true)](https://nodei.co/npm/spawned/)
-
+[![NPM version](https://badge.fury.io/js/spawned.png)](http://badge.fury.io/js/spawned)
 [![Build Status](https://travis-ci.org/mariocasciaro/spawned.png)](https://travis-ci.org/mariocasciaro/spawned)
 [![Coverage Status](https://coveralls.io/repos/mariocasciaro/spawned/badge.png)](https://coveralls.io/r/mariocasciaro/spawned)
+[![Dependency Status](https://gemnasium.com/mariocasciaro/spawned.png)](https://gemnasium.com/mariocasciaro/spawned)
+# spawned
+
+Smart wrapper around `child_process.spawn` using promises.
 
 ## Usage
 

@@ -11,16 +11,16 @@
     "url": "git://github.com/mariocasciaro/spawned.git"
   },
   "dependencies": {
-    "when": "~2.7.1",
+    "when": "~3.0.1",
     "buffers": "~0.1.1",
-    "through2": "~0.3.0"
+    "through2": "~0.4.1"
   },
   "devDependencies": {
-    "mocha": "~1.13.0",
-    "chai": "~1.8.0",
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1",
     "mocha-lcov-reporter": "~0.0.1",
-    "coveralls": "~2.3.0",
-    "istanbul": "~0.1.44"
+    "coveralls": "~2.10.0",
+    "istanbul": "~0.2.7"
   },
   "scripts": {
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha test.js --report html -- -R spec"
