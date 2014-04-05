@@ -13,7 +13,8 @@ var spawned = require('spawned');
 spawned('echo', ['test'])
   .then(function(proc) {
     console.log("Did it work? " + ((proc.out.match(/test/))? "yes" : "no"));
-  }).otherwise(function(err) {
+  })
+  .catch(function(err) {
     console.log("Boooooom");
     console.error(err.err);
   });
@@ -40,8 +41,4 @@ Spawn a new process and returns a promise.
   * `out`: `String` containig `stdout`
   * `combined`: `String` containing the intermingled contents of `stdout` and `stderr`
   * `code`: `Number` the return code of the program
-* when **rejected** resolved to an `Error` having the same properties as above.
-
----
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mariocasciaro/spawned/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+* when **rejected** resolves to an `Error` having the same properties as above.
