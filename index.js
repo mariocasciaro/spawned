@@ -1,4 +1,6 @@
-var spawn = require('child_process').spawn,
+var os = require('os'),
+  spawn = require('child_process').spawn,
+  exec = require('child_process').exec,
   when = require('when'),
   util = require('util'),
   through2 = require('through2'),
@@ -15,7 +17,7 @@ var self = module.exports = function(command, args, options) {
   options = options || {};
   
   
-  var proc = spawn(command, args, options);
+  var proc = os.platform() === 'win32' ? exec(command + ' ' + args, options, null) : spawn(command, args, options);
   var bufferCombined = new Buffers();
   var bufferErr = new Buffers();
   var bufferOut = new Buffers();
